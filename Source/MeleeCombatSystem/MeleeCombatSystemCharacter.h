@@ -55,7 +55,11 @@ protected:
 
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
-			
+
+	UFUNCTION(BlueprintNativeEvent)
+	void CharacterAddControllerYawInput(float Val);	
+	UFUNCTION(BlueprintNativeEvent)
+	void CharacterAddControllerPitchInput(float Val);
 
 protected:
 	// APawn interface

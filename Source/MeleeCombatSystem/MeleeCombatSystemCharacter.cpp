@@ -120,7 +120,17 @@ void AMeleeCombatSystemCharacter::Look(const FInputActionValue& Value)
 	if (Controller != nullptr)
 	{
 		// add yaw and pitch input to controller
-		AddControllerYawInput(LookAxisVector.X);
-		AddControllerPitchInput(LookAxisVector.Y);
+		CharacterAddControllerYawInput_Implementation(LookAxisVector.X);
+		CharacterAddControllerPitchInput_Implementation(LookAxisVector.Y);
 	}
+}
+
+void AMeleeCombatSystemCharacter::CharacterAddControllerYawInput_Implementation(float Val)
+{
+	AddControllerYawInput(Val);
+}
+
+void AMeleeCombatSystemCharacter::CharacterAddControllerPitchInput_Implementation(float Val)
+{
+	AddControllerPitchInput(Val);
 }
